@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Finder - 1000 Foods</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🍳 Recipe Finder</h1>
+  <p>1000 Food Items • Photo • Ingredients • Step-by-Step</p>
+</header>
+
+<section class="search-area">
+  <input id="searchInput" type="text" placeholder="Search food...">
+  <button onclick="searchFoods()">🔍 Search</button>
+</section>
+
+<div class="categories" id="categories"></div>
+<p class="count" id="count"></p>
+<main id="foodGrid" class="food-grid"></main>
+
+<div id="recipeModal" class="modal" onclick="outsideClose(event)">
+  <div class="recipe-box">
+    <button class="close" onclick="closeRecipe()">×</button>
+    <img id="recipeImage" alt="Food photo">
+    <div class="recipe-body">
+      <h2 id="recipeTitle"></h2>
+      <p id="recipeMeta"></p>
+      <div class="section">
+        <h3>🛒 Ingredients</h3>
+        <ul id="ingredients"></ul>
+      </div>
+      <div class="section">
+        <h3>👨‍🍳 How to Make - Step by Step</h3>
+        <ol id="steps"></ol>
+      </div>
+      <p class="note">Note: The starter recipes are generated as a demo. For a real recipe app, replace the generated ingredients/steps with your tested recipe data.</p>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 Recipe Finder</footer>
+<script src="foods.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
